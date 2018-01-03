@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 Jan, 2013 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.syne.hibernate.TableWioutPk" table="EMPLOYEE">
+        
+        <id name="emp_Id" type="java.lang.Integer">
+            <column name="emp_Id"></column> 
+            <generator class="native"></generator>
+        </id>               
+        <property name="emp_Name" type="java.lang.String">
+            <column name="EMP_NAME" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 Jan, 2013 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+	
+	<class name="com.syne.hibernate.Company" table="company">
+		<id name="comp_Id" type="java.lang.Integer">
+			<column name="Comp_Id"></column>
+			<generator class="increment"></generator>
+		</id>
+		<property name="Comp_Address">
+		<column name="Comp_Address"></column>		
+		</property>
+		<property name="Comp_Name">
+		<column name="Comp_Name"></column>		
+		</property>
+		<property name="Comp_Branch">
+		<column name="Comp_Branch"></column>		
+		</property>
+	</class>
+
+
+
+</hibernate-mapping>

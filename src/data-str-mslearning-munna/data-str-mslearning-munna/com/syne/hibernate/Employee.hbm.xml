@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 Jan, 2013 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+
+    <class name="com.syne.hibernate.Employee" table="EMPLOYEE">
+        
+        <!--<id name="Comp_Id" type="java.lang.Integer">
+            <column name="Comp_Id"></column>
+             <generator class="native"></generator> 
+            <generator class="foreign">
+            <param name="property">comp</param>
+        </generator>            
+        </id> -->      
+        
+        <id name="emp_Id" type="java.lang.Integer">
+            <column name="emp_Id" length="20" precision="1"></column>
+             <generator class="increment"></generator>
+                                     
+        </id>
+        
+        <property name="emp_Name" type="java.lang.String">
+            <column name="EMP_NAME" />
+        </property>
+        <property name="emp_Address" type="java.lang.String">
+            <column name="EMP_ADDRESS" />
+        </property>
+        <property name="emp_Comp" type="java.lang.String">
+            <column name="EMP_COMP" />
+        </property>
+        <property name="emp_Salary" type="java.lang.Double">
+            <column name="EMP_SALARY" />
+        </property>
+        <!--
+        <property name="comp_Id" type="java.lang.Integer" >
+            <column name="comp_Id" />
+        </property> -->
+        
+        <many-to-one name="comp"  column="comp_Id"
+       				 cascade="all" unique="true" insert="false" update="false" foreign-key="true">
+       </many-to-one> 
+       
+      <!-- <one-to-one name="comp" cascade="all" constrained="true" class="com.syne.hibernate.Company">
+       </one-to-one>
+       -->
+       </class>
+</hibernate-mapping>
