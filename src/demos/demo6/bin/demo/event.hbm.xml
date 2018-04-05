@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping >
+<class name="demo.Event" 
+		table="EventTable">
+	<id name="eid" column="eidCol">
+	</id>
+	<property name="desc" column="desccol" length="10"></property>
+	<set name="people"  table="dummy">
+		<key column="eidCol"></key>
+		<many-to-many class="demo.Person" column="pidcol"></many-to-many>
+	</set>
+    </class>
+</hibernate-mapping>

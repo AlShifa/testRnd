@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping >
+<class name="demo.Account" >
+		<id name="acno" column="acnoCol" length="5"></id>
+		<property name="balance" column="bal" ></property>
+		<joined-subclass name="demo.SavingAccount" table="savingAcc">
+			<key column="acnoCol"></key>
+			<property name="intRate" column="interest" />
+			<property name="minbalance"  column="minBal"/>
+		</joined-subclass>
+		<joined-subclass name="demo.CurrentAccount"  table="currentAcc">
+			<key column="acnoCol"></key>
+			<property name="overdraft" column="od" />
+		</joined-subclass>
+</class>
+    
+</hibernate-mapping>

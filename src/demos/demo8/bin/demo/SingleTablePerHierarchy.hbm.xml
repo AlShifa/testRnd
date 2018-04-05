@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping >
+<class name="demo.Account" discriminator-value="A">
+		<id name="acno" column="acnoCol" length="5"></id>
+		<discriminator column="typeacc"  length="1"  ></discriminator>
+		<property name="balance" column="bal" ></property>
+		
+		<subclass name="demo.SavingAccount" discriminator-value="S">
+			<property name="intRate" column="interest" />
+			<property name="minbalance"  column="minBal"/>
+			
+		</subclass>
+		<subclass name="demo.CurrentAccount" discriminator-value="C">
+			<property name="overdraft" column="od" />
+		</subclass>
+</class>
+    
+</hibernate-mapping>

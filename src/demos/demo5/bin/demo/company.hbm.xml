@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping >
+<class name="demo.Company" 
+		table="CompTable">
+	<id name="cno" column="cnoCol">
+	</id>
+	<property name="name" column="nameCol" length="10"></property>
+	<property name="addr" column="addrCol" length="20" ></property>
+	<set name="reps"  cascade="all">
+		<key column="cnoCol" />
+		<one-to-many class="demo.Representative"/>
+	</set>
+    </class>
+    <query name="tst">
+    	SELECT cno, addr   from Company where addr  = :addrVar
+    </query>
+    
+</hibernate-mapping>

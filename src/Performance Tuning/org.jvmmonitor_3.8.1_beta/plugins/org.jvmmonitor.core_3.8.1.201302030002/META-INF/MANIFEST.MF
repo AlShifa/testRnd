@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Export-Package: org.jvmmonitor.core,org.jvmmonitor.core.cpu,org.jvmmon
+ itor.core.dump,org.jvmmonitor.core.mbean,org.jvmmonitor.internal.core
+ ;x-friends:="org.jvmmonitor.core.tests"
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: jvmmonitor-core.jar
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.filesystem,o
+ rg.eclipse.jdt.core
+Bundle-Vendor: %providerName
+Bundle-Version: 3.8.1.201302030002
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.jvmmonitor.core.Activator
+Bundle-SymbolicName: org.jvmmonitor.core;singleton:=true
+
+

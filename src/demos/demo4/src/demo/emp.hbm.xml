@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="demo">
+<class name="Emp" table="EmpTable">
+	<id name="empno" column="empnoCol">
+	</id>
+	<property name="ename" column="enameCol" length="10"></property>
+	<property name="salary" ></property>
+     <set name="emails" table="empemails"  >
+		<key column="empnoCol"></key>
+		<element column="email" type="string" length="20"></element>     	
+     </set>
+</class>
+</hibernate-mapping>

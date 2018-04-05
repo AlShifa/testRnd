@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="demo.Dept" table="deptTable111">
+	<id name="deptno" column="deptnoCol"></id>
+	<property name="dname" column="dnameCol" length="10"></property>
+	<property name="loc" column="locCol" length="20"></property>
+</class>
+</hibernate-mapping>
